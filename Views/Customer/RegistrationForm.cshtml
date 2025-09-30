@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Sign Up";
+}
+@model WebNutFactory.Models.Customer
+
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="~/css/RegistrationLoginForm.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Registration</h2>
+            <form asp-action="SubmitForm" method="post">
+                <input asp-for="FirstName" type="text" placeholder="Enter your first name" required>
+				<input asp-for="LastName" type="text" placeholder="Enter your last name" required>
+				<input asp-for="PhoneNumber" type="text" placeholder="Enter your Phone Number" required>
+				<input asp-for="City" type="text" placeholder="Enter your city" required>
+                <input asp-for="State" type="text" placeholder="Enter your state" required>
+				<input asp-for="Country" type="text" placeholder="Enter your country" required>
+				<input asp-for="Address" type="text" placeholder="Enter your address" required>
+                <input asp-for="Email" type="email" placeholder="Enter your email" required>
+                <input asp-for="CPassword" type="password" placeholder="Create a password" required>
+                <input type="checkbox"> I accept all terms 
+                <button type="submit">Register Now</button>
+                <p>Already have an account? <a href="https://localhost:5166/Home/LoginForm">Login now</a></p>
+            </form>
+        </div>
+    </div>
+</body>

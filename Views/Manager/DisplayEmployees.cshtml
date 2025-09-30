@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<WebNutFactory.Models.Employee>
+@{
+}
+<h2>Employees Details</h2>
+<table class="table">
+    <tr>
+        <th>
+        <th>  @Html.DisplayNameFor(Model => Model.EmployeeID) </th>
+        <th>  @Html.DisplayNameFor(Model => Model.FirstName) </th>
+        <th>  @Html.DisplayNameFor(Model => Model.LastName) </th>
+        <th>  @Html.DisplayNameFor(Model => Model.Salary) </th>
+        <th>  @Html.DisplayNameFor(Model => Model.InventoryID) </th>
+        <th>  @Html.DisplayNameFor(Model => Model.PhoneNumber) </th>
+        </th>
+    </tr>
+    @foreach (var a in Model)
+    {
+        <tr>
+            <th>
+            <th>  @Html.DisplayFor(modela => a.EmployeeID) </th>
+            <th>  @Html.DisplayFor(modela => a.FirstName) </th>
+            <th>  @Html.DisplayFor(modela => a.LastName) </th>
+            <th>  @Html.DisplayFor(modela => a.Salary) </th>
+            <th>  @Html.DisplayFor(modela => a.InventoryID) </th>
+            <th>  @Html.DisplayFor(modela => a.PhoneNumber) </th>
+            </th>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = a.EmployeeID }) |
+                @Html.ActionLink("Details", "Details", new { id = a.EmployeeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = a.EmployeeID })
+            </td>
+        </tr>
+    }
+</table>
+<body>
+    <center>
+        <a href="https://localhost:5166/Manager/AddEmployee" class="btn btn-primary">
+            Add Employee
+
+        </a>
+    </center>
+</body>

@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebNutFactory.Models.Inventory
+@{
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+
+</head>
+
+<h1>Inventor Management</h1>
+<center><h3> Add new envintory</h3></center>
+<br>
+<br>
+<body>
+    <center>
+        <form asp-action="SubmitForm" method="post">
+
+            <label asp-for="Location">Location Inventory :</label>
+
+            <input asp-for="Location" type="text" />
+
+
+
+
+
+            <label asp-for="Phone">Phone Number Inventory  :</label>
+
+            <input asp-for="Phone" type="text" />
+
+
+            <br>
+            <br>
+
+            <button type="submit">Add Inventory</button>
+            <br>
+            <br>
+            <p> <span asp-validation-for="Location"></span></p>
+
+            <p>
+                <span asp-validation-for="Phone"></span>
+            </p>
+           
+
+
+        </form>
+     </center>
+ </body>

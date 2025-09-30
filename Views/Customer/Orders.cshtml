@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebNutFactory.Models.Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+<link rel="stylesheet" href="~/css/Orders.css">
+    <h2>Products</h2>
+<p>Costumer ID :  </p>
+    <table>
+        <tr>
+            <th>OrderID</th>
+            <th>OrderDate</th>
+            <th>Status</th>
+            <th>InvetoryID</th>
+            <th>TotalPrice</th>
+        </tr>
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderID</td>
+                <td>8/25/2024</td>
+                <td>@item.oStatus</td>
+                <td>@item.InvetoryID</td>
+                <td>$@item.TotalPrice</td>
+                <td><button class="button">Select</button></td>
+                <td><button class="button">Delet</button></td>
+            </tr>
+        }
+    </table>
